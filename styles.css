@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #1f2a44;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #3b4a6b;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+#hero {
+    background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+#hero a {
+    background: #e63946;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+#hero a:hover {
+    background: #c62828;
+}
+
+#services, #testimonials, #reservation, #about {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#services h2, #testimonials h2, #reservation h2, #about h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1f2a44;
+}
+
+#services div, #testimonials div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#services article, #testimonials article {
+    flex: 1 1 250px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#services article img {
+    max-width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#services article h3, #testimonials article h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+.about-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-container {
+    flex: 1 1 600px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.team-caption {
+    font-size: 1.2em;
+    margin: 15px 0 10px;
+    color: #1f2a44;
+}
+
+.team-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.map-container {
+    flex: 1 1 400px;
+    max-width: 400px;
+}
+
+#about iframe {
+    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #1f2a44;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #c62828;
+}
+
+form span {
+    color: #e63946;
+    font-size: 0.9em;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#modal div {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #e63946;
+}
+
+article, aside {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+article h3, aside h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #1f2a44;
+}
+
+footer {
+    background: #1f2a44;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    #services article, #testimonials article {
+        flex: 1 1 45%;
+    }
+    .team-image {
+        max-width: 500px;
+    }
+    #about iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .team-image {
+        max-width: 400px;
+    }
+    #about iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        font-size: 0.9em;
+    }
+    #hero h2 {
+        font-size: 1.8em;
+    }
+    #services h2, #testimonials h2, #reservation h2, #about h2 {
+        font-size: 1.5em;
+    }
+    .team-image {
+        max-width: 300px;
+    }
+    #about iframe {
+        height: 250px;
+    }
+}
