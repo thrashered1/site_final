@@ -32,8 +32,8 @@ document.getElementById("reservation-form").addEventListener("submit", function(
         hasError = true;
     }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
-        document.getElementById("password-error").textContent = "Парола: 8+ символа, главна/малка буква, число, символ";
+    if (!/^(?=.*[A-Z]).{6,}$/.test(password)) {
+        document.getElementById("password-error").textContent = "Парола: 6+ символа, поне 1 главна буква";
         hasError = true;
     }
 
